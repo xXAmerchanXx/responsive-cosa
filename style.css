@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  border: thin solid red;
+}
+
+#header {
+  background-color: #42cdc6;
+}
+
+#menu {
+  background-color: black;
+  color: white;
+}
+
+#menu > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#menu > ul > li {
+  display: inline-block;
+  padding: 0.2em;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+#sidebar {
+  padding: 1em;
+  background-color: #f8f8f8;
+}
+
+.sidebar-title {
+  font-size: 0.6em;
+  font-weight: bolder;
+}
