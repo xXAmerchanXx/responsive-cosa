@@ -1,13 +1,30 @@
 * {
   box-sizing: border-box;
-  border: thin solid red;
+}
+
+body {
+  margin: 0;
 }
 
 #header {
+  padding: 2em;
   background-color: #42cdc6;
+  color: black;
 }
 
+#logo-main {
+  font-size: 2.5em;
+}
+
+#logo-title, #logo-main span{
+  color: white;
+}
+
+#logo-main { display: inline-block; white-space: nowrap; }
+#logo-description { font-size: 0.75em; display: inline-block; white-space: nowrap; }
+
 #menu {
+  padding: 1em;
   background-color: black;
   color: white;
 }
@@ -20,7 +37,17 @@
 
 #menu > ul > li {
   display: inline-block;
-  padding: 0.2em;
+  padding: 0.5em;
+  border-left: thin solid lightgray;
+}
+
+#search-bar {
+  float: right;
+  border-left: none !important;
+}
+
+#search-bar input {
+    border-radius: 0.5em;
 }
 
 #main {
@@ -33,7 +60,117 @@
   background-color: #f8f8f8;
 }
 
+.sidebar-element select {
+  width:100%;
+  max-width: 100%;
+}
+
 .sidebar-title {
   font-size: 0.6em;
   font-weight: bolder;
+}
+
+#content {
+  padding: 1em;
+  display: grid;
+  grid-column-gap: 2em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card hr {
+  color: #42cdc6;
+}
+
+.card-image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.card-title, .card-subtitle, .card-views, .card-reviews {
+  padding: 0.5em;
+}
+
+.card-title {
+  font-weight: bolder;
+  padding-bottom: 2em;
+}
+
+.card-subtitle {
+  font-size: 0.8em;
+}
+
+.card-reviews {
+  font-size: 0.8em;
+  font-weight: bolder;
+}
+
+.card-footer {
+  color: gray;
+  font-size: 0.7em;
+}
+
+#banner {
+  padding: 1em;
+}
+
+#banner img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#footer {
+  background-color: #32373a;
+  color: gray;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+#footer h6 {
+  font-size: 1em;
+}
+
+#footer ul {
+  font-size: 0.8em;
+}
+
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+
+  #menu > ul > li {
+    display: block;
+    padding: 0.2em;
+  }
+
+  #search-bar {
+    float: none;
+    border-left: none !important;
+  }
+
+  #main {
+    grid-template-columns: 1fr;
+  }
+
+  #content {
+    grid-template-columns: 1fr;
+  }
+
+  #footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
 }
